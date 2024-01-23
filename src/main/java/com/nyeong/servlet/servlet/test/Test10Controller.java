@@ -22,10 +22,12 @@ public class Test10Controller extends HttpServlet{
 		String id = request.getParameter("id");
 		String password = request.getParameter("password");
 
-		if(!id.equals("hagulu")) {
+		if(!id.equals(userMap.get("id"))) {
 			out.println("id가 일치하지 않습니다.");
-		} else if(!password.equals("asdf")){
+			
+		} else if(!password.equals(userMap.get("password"))){
 			out.println("password가 일치하지 않습니다.");
+			
 		} else {
 			out.println("<html><head><title>환영</title></head><body>");
 			out.println("<h1>" + userMap.get("name") + "님 환영합니다.</h1>");

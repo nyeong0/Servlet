@@ -18,6 +18,7 @@ public class Test09Controller extends HttpServlet{
 		
 		PrintWriter out = response.getWriter();
 		
+		
 		String name = request.getParameter("name");
 		String text = request.getParameter("introduce");
 		
