@@ -12,16 +12,17 @@
 </head>
 <body>
 	<div class="container">
-		<h2>날짜, 시간 링크</h2>
+		<h2><b>날짜, 시간 링크</b></h2>
 		<div class="d-flex mt-5">
 			<div>
 				<form method="get" action="/jsp/test/test03-Date.jsp">
 					<button type="submit" class="btn btn-info" name="time"">현재 날짜 확인</button>
 				</form>
 			</div>
+			
 			<div class="ml-2">
 				<form method="get" action="/jsp/test/test03-Time.jsp">
-					<button type="submit" class="btn btn-secondary" name="date">현재 시간 확인</button>
+					<button type="submit" class="btn btn-success" name="date">현재 시간 확인</button>
 				</form>
 			</div>
 		</div>

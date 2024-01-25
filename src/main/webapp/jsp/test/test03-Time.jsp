@@ -17,23 +17,18 @@
 	<%
 	String strTime = request.getParameter("time");
 	Date date = new Date();
-	SimpleDateFormat simpleDate = new SimpleDateFormat("HHmmss");
+	SimpleDateFormat simpleDate = new SimpleDateFormat("HH시 mm분 ss초");
 	String nowTime = simpleDate.format(date);
 	
-	String HH = nowTime.substring(0, 2);
-	String mm = nowTime.substring(2, 4);
-	String ss = nowTime.substring(4, 6);
-	
 	%>
-	<ul>
-		<li>현재 시간</li>
-		<div class="d-flex display-3">
-			현재 시간
-			<b><%=HH %></b>시
-			<b><%=mm %></b>분
-			<b><%=ss %></b>초
-		</div>
-	</ul>
+	<div class="container">
+		<ul>
+			<li>현재 시간</li>
+			<div class="d-flex display-3">
+				현재 시간<%=nowTime %>
+			</div>
+		</ul>
+	</div>
 	
 </body>
 </html>
