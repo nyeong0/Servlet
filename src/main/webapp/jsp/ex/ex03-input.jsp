@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Post 입력</title>
 </head>
 <body>
 	<form method="post" action="/jsp/ex/ex03.jsp">

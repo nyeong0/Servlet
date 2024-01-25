@@ -7,12 +7,12 @@
 <title>Post method</title>
 </head>
 <body>
-<%
-	// 닉네임을 전달 받고 
-	String nickname = request.getParameter("nickname");
-	// 좋아하는 과일
-	String fruit = request.getParameter("fruit");
-%>
+	<%
+		// 닉네임을 전달 받고 보여주는 기능
+		String nickname = request.getParameter("nickname");
+		// 좋아하는 과일
+		String fruit = request.getParameter("fruit");
+	%>
 
 <h3><%= nickname%></h3>
 <h3><%= fruit %></h3>
