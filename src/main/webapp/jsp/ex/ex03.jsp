@@ -12,10 +12,24 @@
 		String nickname = request.getParameter("nickname");
 		// 좋아하는 과일
 		String fruit = request.getParameter("fruit");
+		
+		String animal = request.getParameter("animal");
+		
+		// String food = request.getParameter("food"); 다중 선택하면 1개의 값받아서 전달 됨.
+		String[] foods = request.getParameterValues("food"); // 여러개 값 전달 됨.
+		
+		String foodString = "";
+		for(int i = 0; i < foods.length; i++){
+			foodString += foods[i] + " ";
+		}
+		
+		
 	%>
 
-<h3><%= nickname%></h3>
-<h3><%= fruit %></h3>
+	<h3><%= nickname%></h3>
+	<h3><%= fruit %></h3>
+	<h3><%= animal %></h3>
+	<h3><%= foodString %></h3>
 
 </body>
 </html>
