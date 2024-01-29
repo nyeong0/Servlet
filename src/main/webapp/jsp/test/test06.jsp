@@ -17,13 +17,34 @@
 	%>
 	<div class="container">
 		<h2 class="text-center">장 목록</h2>
-		<hr>
+<!-- 		<hr>
 		<div class="col-12 d-flex">
 			<div class="col-6 text-center font-weight-bold">번호</div>
 			<div class="col-6 text-center font-weight-bold">품목</div>
 		</div>
-		
-		<% for(int i = 0; i < goodsList.size(); i ++){ %>
+ -->		
+ 
+ 	<table class="table text-center">
+ 		<thead>
+ 			<tr>
+ 				<th>번호</th>
+ 				<th>품목</th>
+ 			</tr>
+ 		</thead>
+ 		
+ 		<tbody>
+ 			<% for(int i = 0; i < goodsList.size(); i++){%>
+ 				
+ 			
+ 			<tr>
+ 				<td><%= i+1 %></td>
+ 				<td><%=goodsList.get(i) %></td>
+ 			</tr>
+ 			<% } %>
+ 		</tbody>
+ 	</table>
+ 	
+<%-- 		<% for(int i = 0; i < goodsList.size(); i ++){ %>
 
 		<hr>
 		<div class="d-flex">
@@ -32,7 +53,7 @@
 		</div>
 				
 		<% }%>
-		
+ --%>		
 		
 	</div>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
