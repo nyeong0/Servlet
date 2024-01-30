@@ -1,0 +1,17 @@
+#wrap{
+	width:1200px;
+	margin: 0 auto;
+}
+
+header{
+	height:80px;
+}
+
+.nav{
+	height:50px;
+}
+
+
+footer{
+	height: 80px;
+}

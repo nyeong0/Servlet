@@ -16,7 +16,7 @@
 	<%-- <%=dateString%> 정적 방식에서는 변수 값 가져올 수 있음 --%>
 	
 	<%--동적 방식으로 표현(jsp결과를 갖고오기) --%>
-	<%-- <jsp:include page="date.jsp"> --%>
+	<%-- <jsp:include page="date.jsp" /> --%>
 	<%-- <%=dateString%> 에러 발생함 (정적 방식과의 차이점)  --%>
 	
 	<hr>
