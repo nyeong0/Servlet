@@ -10,10 +10,10 @@
 <body>
 	<div class="container">
 		<h2>메뉴검색</h2>
-		<form method="post" action="/jsp/test/test07.jsp">
+		<form method="get" name = "test07input" action="/jsp/test/test07.jsp">
 		<div class="d-flex">
-			<input type="text" name="menu">
-			<input type="checkbox" class="ml-3" value="check" name="chexk-box">4점 이하 제외
+			<input type="text" class="form-control col-4" name="menu">
+			<label><input type="checkbox" class="ml-3" name="option">4점 이하 제외</label>
 		</div>	
 		<button type="submit" class="btn btn-secondary mt-2">검색</button>
 		</form>
