@@ -91,28 +91,41 @@
     musicInfo.put("composer", "아이유,이종훈,이채규");
     musicInfo.put("lyricist", "아이유");
     musicList.add(musicInfo);	
+    
+    // int id = Integer.parseInt(request.getParameter("id")); 
+    String idString = request.getParameter("id");
+    String title = request.getParameter("title");
+    
 	%>
 	<div id="wrap">
 		<jsp:include page="header.jsp"/>
 		<jsp:include page="menu.jsp"/>
 		<section>
-			<div class="song">
+		
+			<%for(Map<String, Object> music:musicList){ 
+				
+				if(id == (Integer)music.get("id")){
+					
+					int time = (Integer)music.get("time");
+			%>
+			<div class="song mt-3">
 				<h3>곡 정보</h3>
 				<div class="d-flex border border-success p-3 h-100">
-					<img alt="아이유사진" src ="http://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/081/867/444/81867444_1616662460652_1_600x600.JPG">
+					<img alt="아이유사진" src ="<%=music.get("thumbnail")%>">
 					<div class="ml-3">
-						<div class="display-4">삐삐</div>
-						<div class="small text-success">아이유</div>
+						<div class="display-4"><%=music.get("title") %></div>
+						<div class="small text-success"><%=music.get("singer") %></div>
 						<div class="small text-secondary">
-							<div>앨범 삐삐</div>
-							<div>재생시간 3.14</div>
-							<div>작곡가 이종훈</div>
-							<div>작사가 아이유</div>
+							<div>앨범 :<%=music.get("album") %></div>
+							<div>재생시간 <%=time/60%>: <%=time%60%></div>
+							<div>작곡가 <%=music.get("composer") %></div>
+							<div>작사가 <%=music.get("lyricist") %></div>
 						</div>
 					</div>
 				</div>
 			</div>
-			
+			<%}
+			}%>
 			<div class="mt-4">
 				<h3>가사</h3>
 				<hr>

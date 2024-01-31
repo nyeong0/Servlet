@@ -124,7 +124,7 @@
 					
 					<tr>
 						<td><%=music.get("id") %></td>
-						<td><%=music.get("title") %></td>
+						<td><a href="/jspT/test/melong/detail.jsp?id=<%=music.get("id")%>"><%=music.get("title") %></td>
 						<td><%=music.get("album") %></td>
 					</tr>
 				<% }%>
